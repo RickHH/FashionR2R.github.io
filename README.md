@@ -1,8 +1,8 @@
-# Nerfies
+# FashionR2R html
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [FashionR2R website]([https://nerfies.github.io](https://rickhh.github.io/FashionR2R/)).
 
-If you find Nerfies useful for your work please cite:
+The website template is borrowed from:
 ```
 @article{park2021nerfies
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
