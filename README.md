@@ -1,4 +1,4 @@
-# FashionR2R html
+# FashionR2R website
 
 This is the repository that contains source code for the [FashionR2R website](https://rickhh.github.io/FashionR2R/).
 
