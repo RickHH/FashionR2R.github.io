@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FashionR2R: Texture-preserving Rendered-to-Real Image Translation with Diffusion Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/RickHH">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FashionR2R: Texture-preserving Rendered-to-Real Image Translation with Diffusion Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=AN_J0DYAAAAJ&hl=zh-CN">Rui Hu</a><sup>1</sup><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=hJSlrFAAAAAJ">Qian He</a><sup>2</sup><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="">Gaofeng He</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Jiedong Zhuang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Huang Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=hJSlrFAAAAAJ">Huafeng Liu</a><sup>1</sup><sup>✉</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wanghmin.github.io/">Huamin Wang</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Style3D Research,</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution,</span>
+            <span class="author-block"><sup>✉</sup>Corresponding Author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video(comming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(comming soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1i5uH0fdlhWYc2DUMpHTLSGntIHRHHpJl?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>SynFashion Dataset</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Bridging the longstanding gap between rendering (computer graphics) and the real world remains a significant challenge. 
+            Particularly in the realm of fashion, existing methods still struggle to produce realistic and consistent results. 
+            In this paper, we introduce a novel diffusion-based framework that effectively translates rendered images into realistic counterparts, 
+            ensuring the preservation of texture details. 
+            Our approach comprises two primary stages: Domain Knowledge Injection (DKI) and Realistic Image Generation (RIG). 
+            In the DKI stage, the rendered-to-real domain-specific knowledge is injected into the pretrained text-to-image (T2I) diffusion model 
+            through positive domain finetuning and negative domain embedding, enhancing its capability to generate realistic images. 
+            Subsequently, the RIG stage employs a Texture-preserving Attention Control (TAC) specifically designed to maintain 
+            fine-grained clothing textures during image generation. Additionally, we introduce a new dataset named SynFashion, 
+            featuring detailed digital high-resolution clothing with diverse textures. Extensive experimental results show the superiority and 
+            effectiveness of our method in rendered-to-real image translation.
+          
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+  <section class="method">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              In this paper, we propose a novel framework based on diffusion models for rendered-to-real fashion image translation to address above limitations. Our main idea consists of two aspects: Firstly, we propose to leverage abundant generative prior from pretrained Text-to-Image (T2I) diffusion models, and apply simple adaptation to realistic image generation under the guidance of distilled rendered prior. Secondly, we adopt a texture-preserving mechanism by extracting spatial image structure through attention from an inversion pipeline.
+            </p>
+          </div>
+
+          <div style="display: flex; justify-content: center;">
+            <img src="./static/images/method.png" alt="Teaser Image" width="100%" height="100%">
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              To achieve this, we design a diffusion-based method consisting of two stages: Domain Knowledge Injection (DKI) and Realistic Image Generation (RIG). During DKI, we first finetune a pretrained T2I diffusion model on real fashion photos with derived captions from BLIP, to adapt its capability in generating high-quality images to our target domain. After this adaptation, we propose to guide the image generation towards the negative direction of rendered effect. Inspired by Textual Inversion, we distill a general rendered "concept" with thousands of rendered fashion images by training a negative domain embedding vector based on the adapted base model. 
+            </p>
+          </div>
+
+          <div style="display: flex; justify-content: center;">
+            <img src="./static/images/Attn.png" alt="Teaser Image" width="80%" height="80%">
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              During RIG, we employ a DDIM inversion pipeline to first invert a rendered image into the latent noise map, and then generate its corresponding real image using the previous embedding as a negative guidance. Similar to recent training free controls in T2I generation method, we discover that the attention map in the shallow layers of the UNet contains rich spatial image structure and can be used for fine-grained texture-preserving during the generation. Specifically, we inject query and key of the self-attention from the rendered image inversion and generation pipeline to the rendered-to-real image generation pipeline. This largely improves the consistency of intricate clothing texture details.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">▶ </b>Results on FaceSynthetics dataset</h2>
+        <div style="display: flex; justify-content: center;">
+          <img src="./static/images/result_Face.png" alt="Teaser Image" width="100%" height="100%">
+        </div>
+    </svg></div><div class="slider-pagination"><div class="slider-page is-active" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page" data-index="2"></div><div class="slider-page" data-index="3"></div><div class="slider-page" data-index="4"></div></div></div></div>
+      </div>
+
+      <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">▶ </b>Results on SynFashion dataset</h2>
+      <div style="display: flex; justify-content: center;">
+        <img src="./static/images/result_garment.png" alt="Teaser Image" width="80%" height="80%">
+      </div>
+
+    </div>
+
+    <h2 class="title is-4 has-text-centered"><b style="color:#008AD7; font-weight:normal">▶ </b>Ablation Study</h2>
+    <div style="display: flex; justify-content: center;">
+      <img src="./static/images/ablation.png" alt="Teaser Image" width="80%" height="80%">
+    </div>
+
+
+  </section>
+  
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Hu2024FashionR2R,
+  author    = {Hu, Rui and He, Qian and He, Gaofeng and Zhuang, Jiedong and Chen, Huang and Liu, Huafeng and Wang, Huamin},
+  title     = {FashionR2R: Texture-preserving Rendered-to-Real Image Translation with Diffusion Models},
+  journal   = {NeruIPS},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        The website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
