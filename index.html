@@ -168,17 +168,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Bridging the longstanding gap between rendering (computer graphics) and the real world remains a significant challenge. 
-            Particularly in the realm of fashion, existing methods still struggle to produce realistic and consistent results. 
-            In this paper, we introduce a novel diffusion-based framework that effectively translates rendered images into realistic counterparts, 
-            ensuring the preservation of texture details. 
-            Our approach comprises two primary stages: Domain Knowledge Injection (DKI) and Realistic Image Generation (RIG). 
-            In the DKI stage, the rendered-to-real domain-specific knowledge is injected into the pretrained text-to-image (T2I) diffusion model 
-            through positive domain finetuning and negative domain embedding, enhancing its capability to generate realistic images. 
-            Subsequently, the RIG stage employs a Texture-preserving Attention Control (TAC) specifically designed to maintain 
-            fine-grained clothing textures during image generation. Additionally, we introduce a new dataset named SynFashion, 
-            featuring detailed digital high-resolution clothing with diverse textures. Extensive experimental results show the superiority and 
-            effectiveness of our method in rendered-to-real image translation.
+            \begin{abstract}
+Modeling and producing lifelike clothed human images has attracted researchers' attention from different areas for decades, with the complexity from highly articulated and structured content. Rendering algorithms decompose and simulate the imaging process of a camera, while are limited by the accuracy of modeled variables and the efficiency of computation. Generative models can produce impressively vivid human images, however still lacking in controllability and editability. This paper studies photorealism enhancement of rendered images, leveraging generative power from diffusion models on the controlled basis of rendering. We introduce a novel framework to translate rendered images into their realistic counterparts, which consists of two stages: Domain Knowledge Injection (DKI) and Realistic Image Generation (RIG). In DKI, we adopt positive (real) domain finetuning and negative (rendered) domain embedding to inject knowledge into a pretrained Text-to-image (T2I) diffusion model. In RIG, we generate the realistic image corresponding to the input rendered image, with a Texture-preserving Attention Control (TAC) to preserve fine-grained clothing textures, exploiting the decoupled features encoded in the UNet structure. Additionally, we introduce SynFashion dataset, featuring high-quality digital clothing images with diverse textures. Extensive experimental results demonstrate the superiority and effectiveness of our method in rendered-to-real image translation. 
           
           </p>
         </div>
@@ -211,7 +202,7 @@
 
           <div class="content has-text-justified">
             <p>
-              In this paper, we propose a novel framework based on diffusion models for rendered-to-real fashion image translation to address above limitations. Our main idea consists of two aspects: Firstly, we propose to leverage abundant generative prior from pretrained Text-to-Image (T2I) diffusion models, and apply simple adaptation to realistic image generation under the guidance of distilled rendered prior. Secondly, we adopt a texture-preserving mechanism by extracting spatial image structure through attention from an inversion pipeline.
+              In this paper, we propose a novel framework based on diffusion models for rendered-to-real fashion image translation. Our main idea consists of two aspects: Firstly, we propose to leverage abundant generative prior from pretrained Text-to-Image (T2I) diffusion models, and apply simple adaptation to realistic image generation under the guidance of distilled rendered prior. Secondly, we adopt a texture-preserving mechanism by extracting spatial image structure through attention from an inversion pipeline.
             </p>
           </div>
 
