@@ -39,6 +39,22 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+      /* 通过 CSS 来控制容器大小 */
+      #globe-container {
+          width: 30px;   /* 设置宽度 */
+          height: 30px;  /* 设置高度 */
+          position: relative; /* 确保内部定位可控 */
+          overflow: hidden; /* 防止超出容器范围的元素溢出 */
+      }
+
+      /* 针对内部自动生成的元素进行控制（如果需要）*/
+      #globe-container canvas, 
+      #globe-container div {
+          width: 100% !important;
+          height: 100% !important;
+      }
+  </style>
 </head>
 <body>
 
@@ -266,7 +282,9 @@ Modeling and producing lifelike clothed human images has attracted researchers' 
 }</code></pre>
   </div>
 </section>
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=41b8MUgcy94Cc1KSVBZLQClE0MU-Sb0ioENBjK4RrTs"></script>
+<div id="globe-container">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=41b8MUgcy94Cc1KSVBZLQClE0MU-Sb0ioENBjK4RrTs"></script>
+</div>
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
